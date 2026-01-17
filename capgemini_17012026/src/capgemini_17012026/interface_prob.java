@@ -1,0 +1,10 @@
+package capgemini_17012026;
+
+public class interface_prob {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
