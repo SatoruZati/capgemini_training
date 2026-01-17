@@ -135,8 +135,8 @@ Each Java file contains a `main` method that can be executed independently:
 ### Example: Running an Arithmetic Operations Program
 
 ```bash
-cd capgemini_training/capgemini_10012026/src/Package03
-javac arithmetic_operations.java
+cd capgemini_training/capgemini_10012026/src
+javac Package03/arithmetic_operations.java
 java Package03.arithmetic_operations
 ```
 
