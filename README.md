@@ -10,11 +10,14 @@ A comprehensive collection of Java programming exercises and examples from Capge
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [Learning Path](#learning-path)
+- [Contributing](#contributing)
 - [License](#license)
+- [Contact](#contact)
 
 ## 🎯 Overview
 
-This repository contains Java programming exercises, examples, and practice code from Capgemini training sessions conducted in January 2026. Each directory represents a day's learning material, organized chronologically with focused topics and hands-on examples.
+This repository contains Java programming exercises, examples, and practice code from Capgemini training sessions conducted in January 2026. Each directory represents a day's learning material, organized chronologically.
 
 ## 📁 Repository Structure
 
@@ -27,6 +30,8 @@ capgemini_training/
 ├── capgemini_14012026/    # Day 5: Arrays
 ├── capgemini_15012026/    # Day 6: Strings and StringBuilder
 ├── capgemini_16012026/    # Day 7: Constructors and Encapsulation
+├── capgemini_17012026/    # Day 8: Inheritance, Interfaces, and Super Calls
+├── capgemini_19012026/    # Day 9: Advanced OOP Practice
 └── LICENSE                # MIT License
 ```
 
@@ -91,6 +96,16 @@ Each directory contains:
 - Access modifiers (private, public)
 - Relationships in Java
 - Package examples
+
+### Day 8 (17/01/2026) - Inheritance, Interfaces, and Super Calls
+- Inheritance basics and class hierarchies
+- `super` calls and constructor chaining
+- Interface introduction and usage
+- Package-level structure and documentation
+
+### Day 9 (19/01/2026) - Advanced OOP Practice
+- Continued practice with OOP principles
+- Consolidated exercises and examples
 
 ## ✅ Prerequisites
 
