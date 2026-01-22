@@ -32,6 +32,9 @@ capgemini_training/
 ├── capgemini_16012026/    # Day 7: Constructors and Encapsulation
 ├── capgemini_17012026/    # Day 8: Inheritance, Interfaces, and Super Calls
 ├── capgemini_19012026/    # Day 9: Advanced OOP Practice
+├── capgemini_20012026/    # Day 10: Multilevel Inheritance and Wrapper Classes
+├── capgemini_21012026/    # Day 11: Exception Handling and File I/O
+├── capgemini_22012026/    # Day 12: Collections Framework
 └── LICENSE                # MIT License
 ```
 
@@ -106,6 +109,34 @@ Each directory contains:
 ### Day 9 (19/01/2026) - Advanced OOP Practice
 - Continued practice with OOP principles
 - Consolidated exercises and examples
+
+### Day 10 (20/01/2026) - Multilevel Inheritance and Wrapper Classes
+- Multilevel inheritance implementation
+- Multiple inheritance via interfaces
+- Difference between `extends` and `implements`
+- Wrapper classes (Integer, Boolean, Character, etc.)
+- Java Object class methods
+- Type conversion between primitives and objects
+
+### Day 11 (21/01/2026) - Exception Handling and File I/O
+- Exception handling fundamentals
+- Try-catch-finally blocks
+- Checked vs Unchecked exceptions
+- Exception hierarchy
+- `throw` and `throws` keywords
+- Custom exception handling
+- File handling and I/O operations
+- Singleton design pattern implementation
+
+### Day 12 (22/01/2026) - Collections Framework
+- Java Collection Framework overview
+- ArrayList implementation and operations
+- LinkedList and comparison with ArrayList
+- List interface methods
+- Iterator and ListIterator interfaces
+- Stack operations (LIFO principle)
+- Collection hierarchy (List, Set, Queue, Map)
+- Practical algorithms using collections
 
 ## ✅ Prerequisites
 
