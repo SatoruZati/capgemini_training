@@ -34,7 +34,8 @@ capgemini_training/
 ├── capgemini_19012026/    # Day 9: Advanced OOP Practice
 ├── capgemini_20012026/    # Day 10: Multilevel Inheritance and Wrapper Classes
 ├── capgemini_21012026/    # Day 11: Exception Handling and File I/O
-├── capgemini_22012026/    # Day 12: Collections Framework
+├── capgemini_22012026/    # Day 12: Collections Framework - Lists and Stacks
+├── capgemini_24012026/    # Day 13: Collections Framework - Sets
 └── LICENSE                # MIT License
 ```
 
@@ -128,7 +129,7 @@ Each directory contains:
 - File handling and I/O operations
 - Singleton design pattern implementation
 
-### Day 12 (22/01/2026) - Collections Framework
+### Day 12 (22/01/2026) - Collections Framework - Lists and Stacks
 - Java Collection Framework overview
 - ArrayList implementation and operations
 - LinkedList and comparison with ArrayList
@@ -136,7 +137,18 @@ Each directory contains:
 - Iterator and ListIterator interfaces
 - Stack operations (LIFO principle)
 - Collection hierarchy (List, Set, Queue, Map)
-- Practical algorithms using collections
+- Practical algorithms using collections (e.g., valid parenthesis problem)
+
+### Day 13 (24/01/2026) - Collections Framework - Sets
+- Set interface introduction
+- HashSet implementation and characteristics
+- LinkedHashSet for ordered sets
+- TreeSet and sorted sets
+- NavigableSet interface and methods
+- Set operations (add, remove, contains, size)
+- Difference between HashSet, LinkedHashSet, and TreeSet
+- Working with custom objects in Sets (Employee class example)
+- Red-Black tree data structure in TreeSet
 
 ## ✅ Prerequisites
 
