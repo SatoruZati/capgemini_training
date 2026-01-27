@@ -36,6 +36,7 @@ capgemini_training/
 ├── capgemini_21012026/    # Day 11: Exception Handling and File I/O
 ├── capgemini_22012026/    # Day 12: Collections Framework - Lists and Stacks
 ├── capgemini_24012026/    # Day 13: Collections Framework - Sets
+├── capgemini_27012026/    # Day 14: Maps and Lambda Expressions
 └── LICENSE                # MIT License
 ```
 
@@ -149,6 +150,20 @@ Each directory contains:
 - Difference between HashSet, LinkedHashSet, and TreeSet
 - Working with custom objects in Sets (Employee class example)
 - Red-Black tree data structure in TreeSet
+
+### Day 14 (27/01/2026) - Maps and Lambda Expressions
+- Map interface and HashMap implementation
+- Key-value pair operations (put, get, remove)
+- Map traversal methods (entrySet, keySet, values)
+- Map methods (containsKey, containsValue, size, isEmpty, clear, replace)
+- Iterating over maps using for-each loops and lambda expressions
+- Lambda expressions and functions introduction
+- Functional interfaces and @FunctionalInterface annotation
+- Lambda syntax and structure (parameters, arrow operator, body)
+- Anonymous functions and their benefits
+- Built-in functional interfaces (Runnable, Comparator, BiPredicate)
+- Lambda with collections (sorting, searching, filtering)
+- Practical examples with comparators and predicates
 
 ## ✅ Prerequisites
 
