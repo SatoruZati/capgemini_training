@@ -1,5 +1,7 @@
 # Capgemini Training - Java Programming
 
+> **📝 Note:** Each folder in this repository contains a `package-info.java` file (or `package-info` file) with detailed notes and explanations on the topics covered that day. These files serve as quick references for the concepts learned during training sessions.
+
 A comprehensive collection of Java programming exercises and examples from Capgemini training sessions. This repository documents daily learning progress covering fundamental to advanced Java concepts.
 
 ## 📋 Table of Contents
@@ -37,6 +39,7 @@ capgemini_training/
 ├── capgemini_22012026/    # Day 12: Collections Framework - Lists and Stacks
 ├── capgemini_24012026/    # Day 13: Collections Framework - Sets
 ├── capgemini_27012026/    # Day 14: Maps and Lambda Expressions
+├── capgemini_29012026/    # Day 15: DSA Fundamentals and Advanced String Handling
 └── LICENSE                # MIT License
 ```
 
@@ -165,6 +168,20 @@ Each directory contains:
 - Lambda with collections (sorting, searching, filtering)
 - Practical examples with comparators and predicates
 
+### Day 15 (29/01/2026) - DSA Fundamentals and Advanced String Handling
+- Data Structures and Algorithms (DSA) introduction
+- Time and space complexity analysis
+- Array operations and algorithms
+- String manipulation techniques
+- StringBuilder and StringBuffer comparison
+- Immutable class concepts
+- String intern() method and memory management
+- Method shadowing in Java
+- Collections Framework deep dive (List, Set, Map, Queue)
+- RandomAccess interface and marker interfaces
+- Linear vs non-linear collections
+- TreeSet and Red-Black tree implementation details
+
 ## ✅ Prerequisites
 
 - **Java Development Kit (JDK)**: Version 8 or higher
@@ -218,6 +235,7 @@ java Package03.arithmetic_operations
 - Browse through each day's folder to see the progression of concepts
 - Each file is self-contained with examples demonstrating specific concepts
 - Comments in the code provide additional context and explanations
+- **Check the `package-info.java` file in each folder for comprehensive notes on topics covered**
 
 ## 📖 Learning Path
 
