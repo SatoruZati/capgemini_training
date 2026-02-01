@@ -41,6 +41,7 @@ capgemini_training/
 ├── capgemini_27012026/    # Day 14: Maps and Lambda Expressions
 ├── capgemini_29012026/    # Day 15: DSA Fundamentals and Advanced String Handling
 ├── capgemini_31012026/    # Day 16: Advanced Stack and Queue Implementations
+├── examples/              # Practice Projects and Problem Statements
 └── LICENSE                # MIT License
 ```
 
@@ -50,6 +51,36 @@ Each directory contains:
 - `.project` - Eclipse project configuration
 - `.settings/` - Eclipse settings
 - `bin/` - Compiled class files
+
+### Practice Projects
+
+The `examples/` directory contains comprehensive project problem statements that integrate multiple concepts learned during the training:
+
+1. **[Enterprise Order Management System](examples/enterprise-order-management-system.md)**
+   - Order lifecycle management using enum and interfaces
+   - State-driven behavior without conditional logic
+   - Custom exception handling for illegal state transitions
+   - Demonstrates polymorphism and encapsulation
+
+2. **[Secure Banking Transaction Engine](examples/secure-banking-transaction-engine.md)**
+   - Bank account management system with multiple account types
+   - Data validation and authorization
+   - Custom checked and unchecked exceptions
+   - Runtime polymorphism and method overloading
+
+3. **[Employee Access and Payroll System](examples/mployee-access-and-payroll-system.md)**
+   - Role-based access control for payroll management
+   - Abstraction with interfaces for different employee types
+   - Secure encapsulation of sensitive data
+   - Authorization and exception handling
+
+4. **[Smart Resource Monitoring System](examples/smart-resource-monitoring-system.md)**
+   - System resource monitoring (CPU, memory, disk)
+   - Partial and full abstraction strategies
+   - Graceful failure recovery with exception handling
+   - Demonstrates robust error handling patterns
+
+These projects are designed to reinforce the OOP concepts and exception handling techniques learned throughout the training.
 
 ## 📚 Topics Covered
 
@@ -265,6 +296,7 @@ java Package03.arithmetic_operations
 - Each file is self-contained with examples demonstrating specific concepts
 - Comments in the code provide additional context and explanations
 - **Check the `package-info.java` file in each folder for comprehensive notes on topics covered**
+- **Review the `examples/` folder for comprehensive project problem statements that integrate multiple concepts**
 
 ## 📖 Learning Path
 
@@ -274,6 +306,7 @@ For optimal learning, it's recommended to go through the directories in chronolo
 2. Progress through each subsequent directory
 3. Complete the practice exercises in each section
 4. Review the examples and modify them to experiment with concepts
+5. Once you've covered the fundamentals and OOP concepts (Days 1-16), tackle the practice projects in the `examples/` folder to apply multiple concepts together
 
 ## 🤝 Contributing
 
