@@ -40,6 +40,7 @@ capgemini_training/
 ├── capgemini_24012026/    # Day 13: Collections Framework - Sets
 ├── capgemini_27012026/    # Day 14: Maps and Lambda Expressions
 ├── capgemini_29012026/    # Day 15: DSA Fundamentals and Advanced String Handling
+├── capgemini_31012026/    # Day 16: Advanced Stack and Queue Implementations
 └── LICENSE                # MIT License
 ```
 
@@ -181,6 +182,34 @@ Each directory contains:
 - RandomAccess interface and marker interfaces
 - Linear vs non-linear collections
 - TreeSet and Red-Black tree implementation details
+
+### Day 16 (31/01/2026) - Advanced Stack and Queue Implementations
+- Stack Data Structure deep dive
+  - LIFO (Last In First Out) principle
+  - Stack class hierarchy (List → Vector → Stack)
+  - Core operations: push, pop, peek, isEmpty, search
+  - Thread safety and synchronization in Stack
+  - Real-world applications (Undo/Redo operations)
+- Custom Stack implementation using arrays
+  - Building stack from scratch with fixed capacity
+  - Understanding stack operations at low level
+- Queue Data Structure fundamentals
+  - FIFO (First In First Out) principle
+  - Core operations: enqueue, dequeue, peek, isEmpty, size
+  - Comparison with Stack behavior
+  - Real-world applications (print queues, CPU scheduling, call centers)
+- Custom Queue implementation using arrays
+  - Front and rear pointer management
+  - Circular queue concepts
+- Practical algorithmic applications
+  - Valid Parenthesis checker using Stack
+  - Reverse Polish Notation (RPN) evaluation
+  - Infix to Postfix conversion
+- Project-based learning
+  - Secure Banking Transaction Engine (OOP design with validation)
+  - To-Do List application structure
+- Comparison of static vs dynamic data structures
+- Understanding Vector class and legacy collections
 
 ## ✅ Prerequisites
 
