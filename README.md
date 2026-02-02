@@ -19,7 +19,7 @@ A comprehensive collection of Java programming exercises and examples from Capge
 
 ## 🎯 Overview
 
-This repository contains Java programming exercises, examples, and practice code from Capgemini training sessions conducted in January 2026. Each directory represents a day's learning material, organized chronologically.
+This repository contains Java programming exercises, examples, and practice code from Capgemini training sessions conducted in January-February 2026. Each directory represents a day's learning material, organized chronologically.
 
 ## 📁 Repository Structure
 
@@ -41,6 +41,7 @@ capgemini_training/
 ├── capgemini_27012026/    # Day 14: Maps and Lambda Expressions
 ├── capgemini_29012026/    # Day 15: DSA Fundamentals and Advanced String Handling
 ├── capgemini_31012026/    # Day 16: Advanced Stack and Queue Implementations
+├── capgemini_02022026/    # Day 17: Search Algorithms and Sorting Techniques
 ├── examples/              # Practice Projects and Problem Statements
 └── LICENSE                # MIT License
 ```
@@ -241,6 +242,35 @@ These projects are designed to reinforce the OOP concepts and exception handling
   - To-Do List application structure
 - Comparison of static vs dynamic data structures
 - Understanding Vector class and legacy collections
+
+### Day 17 (02/02/2026) - Search Algorithms and Sorting Techniques
+- Linear Search Algorithm
+  - Time complexity: O(n) worst case
+  - Space complexity: O(1)
+  - Works on both sorted and unsorted arrays
+  - Simple implementation and understanding
+  - Use cases for small datasets and linked lists
+- Binary Search Algorithm
+  - Time complexity: O(log n) worst case
+  - Space complexity: O(1)
+  - Requires sorted array
+  - Divide and conquer approach
+  - Efficient for large datasets
+- Quick Search (Quickselect) Algorithm
+  - Time complexity: O(n log n) average, O(n²) worst case
+  - Space complexity: O(log n) due to recursion
+  - Finding k-th smallest/largest element
+  - Partitioning around pivot element
+  - Related to quicksort algorithm
+- Sorting Algorithms
+  - Bubble Sort implementation and analysis
+  - Merge Sort algorithm
+  - Pattern-based array problems
+- Array Algorithms
+  - Finding k-th maximum and minimum elements
+  - Clump checking in arrays
+  - Maximum element in bitonic array
+  - Square root calculation algorithms
 
 ## ✅ Prerequisites
 
