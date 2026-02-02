@@ -257,7 +257,7 @@ These projects are designed to reinforce the OOP concepts and exception handling
   - Divide and conquer approach
   - Efficient for large datasets
 - Quick Search (Quickselect) Algorithm
-  - Time complexity: O(n log n) average, O(n²) worst case
+  - Time complexity: O(n) average, O(n²) worst case
   - Space complexity: O(log n) due to recursion
   - Finding k-th smallest/largest element
   - Partitioning around pivot element
