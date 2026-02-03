@@ -42,6 +42,7 @@ capgemini_training/
 ├── capgemini_29012026/    # Day 15: DSA Fundamentals and Advanced String Handling
 ├── capgemini_31012026/    # Day 16: Advanced Stack and Queue Implementations
 ├── capgemini_02022026/    # Day 17: Search Algorithms and Sorting Techniques
+├── capgemini_03022026/    # Day 18: Comparable, Comparator, and Greedy Algorithms
 ├── examples/              # Practice Projects and Problem Statements
 └── LICENSE                # MIT License
 ```
@@ -271,6 +272,28 @@ These projects are designed to reinforce the OOP concepts and exception handling
   - Clump checking in arrays
   - Maximum element in bitonic array
   - Square root calculation algorithms
+
+### Day 18 (03/02/2026) - Comparable, Comparator, and Greedy Algorithms
+- Comparable and Comparator Interfaces
+  - Functional interfaces with single abstract method
+  - compareTo() method for object comparison
+  - Implementing custom comparison logic
+  - Sorting custom objects (Student, Job classes)
+- Greedy Algorithms
+  - Algorithmic paradigm for optimization problems
+  - Building solutions piece by piece with local optimal choices
+  - Greedy choice property and optimal substructure
+  - When greedy algorithms work and their limitations
+- Practical Applications
+  - Job Scheduling Problem using greedy approach
+  - Maximizing profit with job deadlines
+  - Coin Change Problem
+  - Huffman Coding concepts
+- Algorithm Design Principles
+  - Sorting jobs by profit in descending order
+  - Assigning jobs to latest available time slots
+  - Handling constraints and deadlines
+  - Understanding when greedy solutions are not optimal
 
 ## ✅ Prerequisites
 
