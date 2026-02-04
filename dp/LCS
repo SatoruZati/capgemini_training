@@ -1,0 +1,134 @@
+1️⃣ What is Longest Common Subsequence (LCS)? (Very Simple)
+First: What is a Subsequence?
+
+A subsequence:
+
+Keeps order
+
+Characters don’t need to be continuous
+
+Example:
+
+String = "ABCDE"
+Subsequence = "ACE" ✅
+Subsequence = "AEC" ❌ (order changed)
+Now LCS means:
+
+The longest sequence of characters that appears in BOTH strings in the SAME ORDER (not necessarily continuous)
+
+2️⃣ Simple Example (Understand First)
+String 1 = "ABC"
+String 2 = "AC"
+
+Common subsequences:
+
+"A"
+
+"C"
+
+"AC" ✅ (longest)
+
+👉 LCS length = 2
+
+3️⃣ Important Rules / Criteria (Must Remember)
+✅ Rule 1: Order must be preserved
+
+"ABC" & "BAC" → "AC" is valid, "BA" is not
+
+✅ Rule 2: Characters need NOT be continuous
+
+Gaps are allowed
+
+✅ Rule 3: We want the longest possible subsequence
+❌ Not substring
+
+Substring must be continuous
+Subsequence does not
+
+4️⃣ Why Dynamic Programming (DP)?
+Brute force problem:
+
+Try all subsequences → 2ⁿ combinations ❌
+
+DP idea (simple):
+
+Solve smaller string comparisons and reuse results
+
+5️⃣ DP Table Meaning (MOST IMPORTANT)
+
+Let:
+
+dp[i][j]
+Meaning:
+
+Length of LCS between
+first i characters of string1
+first j characters of string2
+
+6️⃣ DP Decision Logic (Heart of LCS)
+Case 1️⃣: Characters match
+s1[i-1] == s2[j-1]
+
+👉 Include this character
+👉 Add 1 to previous result
+
+dp[i][j] = 1 + dp[i-1][j-1]
+Case 2️⃣: Characters do NOT match
+
+👉 Ignore one character (try both ways)
+
+dp[i][j] = max(
+    dp[i-1][j],   // ignore char from s1
+    dp[i][j-1]    // ignore char from s2
+)
+7️⃣ Visual DP Table (Understand Clearly)
+
+Example:
+
+String 1 = "ABCBDAB"
+String 2 = "BDCAB"
+
+Final DP table value = LCS length
+
+8️⃣ Very Simple Java Program (DP)
+public class LCS {
+
+
+    public static void main(String[] args) {
+
+
+        String s1 = "ABC";
+        String s2 = "AC";
+
+
+        int m = s1.length();
+        int n = s2.length();
+
+
+        // DP table
+        int[][] dp = new int[m + 1][n + 1];
+
+
+        // Build the table
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+
+
+                // If characters match
+                if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
+                    dp[i][j] = 1 + dp[i - 1][j - 1];
+                }
+                // If characters do not match
+                else {
+                    dp[i][j] = Math.max(
+                            dp[i - 1][j],
+                            dp[i][j - 1]
+                    );
+                }
+            }
+        }
+
+
+        System.out.println("LCS Length: " + dp[m][n]);
+    }
+}

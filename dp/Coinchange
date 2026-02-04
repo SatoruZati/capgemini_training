@@ -1,0 +1,39 @@
+1️⃣ What is the Coin Change Problem? (Very Simple)
+
+You are given:
+
+Some coin denominations
+
+A target amount
+
+👉 You need to make the amount using these coins
+
+There are two famous versions:
+
+Minimum number of coins (MOST IMPORTANT)
+
+Number of ways to make the amount
+
+We’ll start with Minimum Coins (interview favorite).
+
+2️⃣ Simple Example
+Coins = {1, 2, 5}
+Amount = 11
+
+Possible solution:
+
+5 + 5 + 1 = 3 coins ✅
+
+👉 Answer = 3
+
+3️⃣ Rules / Criteria (Must Remember)
+✅ Rule 1: You can use same coin multiple times
+
+(Unbounded problem)
+
+✅ Rule 2: Order does NOT matter
+
+(2+1 = 1+2)
+
+✅ Rule 3: Goal is to minimize number of coins
+❌ You cannot use negative or fractional coins
