@@ -43,6 +43,9 @@ capgemini_training/
 ├── capgemini_31012026/    # Day 16: Advanced Stack and Queue Implementations
 ├── capgemini_02022026/    # Day 17: Search Algorithms and Sorting Techniques
 ├── capgemini_03022026/    # Day 18: Comparable, Comparator, and Greedy Algorithms
+├── capgemini_04022026/    # Day 19: Enums, Hashing Algorithms, and Jump Game Problems
+├── dp/                    # Dynamic Programming Algorithms
+├── greedy/                # Greedy Algorithm Implementations
 ├── examples/              # Practice Projects and Problem Statements
 └── LICENSE                # MIT License
 ```
@@ -83,6 +86,24 @@ The `examples/` directory contains comprehensive project problem statements that
    - Demonstrates robust error handling patterns
 
 These projects are designed to reinforce the OOP concepts and exception handling techniques learned throughout the training.
+
+### Algorithm Implementation Directories
+
+The repository also contains standalone directories for algorithm implementations:
+
+**`dp/` - Dynamic Programming Algorithms**
+
+Contains implementations of classic dynamic programming problems:
+- **Knapsack01.java** - 0/1 Knapsack problem using dynamic programming
+- **CoinChangeMin.java** - Minimum coin change problem
+- **LCS.java** - Longest Common Subsequence algorithm
+- **RodCutting.java** - Rod cutting optimization problem
+
+**`greedy/` - Greedy Algorithm Implementations**
+
+Contains implementations of greedy algorithm problems:
+- **FractionalKnapsack.java** - Fractional knapsack problem using greedy approach
+- **Jobscheduling.java** - Job scheduling with deadlines for maximum profit
 
 ## 📚 Topics Covered
 
@@ -294,6 +315,32 @@ These projects are designed to reinforce the OOP concepts and exception handling
   - Assigning jobs to latest available time slots
   - Handling constraints and deadlines
   - Understanding when greedy solutions are not optimal
+
+### Day 19 (04/02/2026) - Enums, Hashing Algorithms, and Jump Game Problems
+- Enums in Java
+  - Special data type for predefined constants
+  - Enum declarations and usage
+  - Enums with fields, methods, and constructors
+  - Use cases: menu choices, rounding modes, command line flags
+- Hashing Algorithms
+  - Hash function fundamentals and purpose
+  - Hash code computation using hashCode() method
+  - Mapping hash codes to array indices
+  - Collision handling strategies (chaining, open addressing)
+  - Hash table implementation details
+  - Load factor and rehashing concepts
+  - equals() and hashCode() contract in Java
+  - Collision resolution techniques
+  - Performance optimization in hash-based collections
+- Greedy Algorithm Applications
+  - Jump Game Problem - reachability analysis
+  - Jump Game II - minimum jumps to reach the end
+  - Array traversal and optimization strategies
+  - Greedy approach for jump problems
+- Array Algorithm Problems
+  - Finding duplicates in arrays
+  - Maximum jump length analysis
+  - Dynamic programming vs greedy approaches
 
 ## ✅ Prerequisites
 
