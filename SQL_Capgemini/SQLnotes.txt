@@ -1,0 +1,389 @@
+DQL:
+1. SELECT
+2. PROJECTION
+3. SELECTION
+4. JOINS
+
+DML:
+1. INSERT
+2. UPDATE
+3. DELETE
+
+DCL:
+1. GRANT
+2. REVOKE
+
+TCL:
+1. COMMIT
+2. ROLLBACK
+3. SAVEPOINT
+
+//////////////////////////////////////////////////////////////////////////
+
+Now, for DQL:
+1. SELECT is used to retrieve data from a database. The data returned is stored in a result table, called the result set.
+syntax: SELECT column1, column2, ... FROM table_name;
+Select is used to retrieve data and is responsible for generating result table.
+
+===================================================================================================
+
+2. PROJECTION is used to select the columns to be displayed in the result set.
+syntax: SELECT column1, column2, ... FROM table_name;
+Projection is responsible for selecting the columns to be displayed in the result set.
+Fetch the data from a table by selecting the columns from the table.
+
+SELECT */DISTINCT COLUMN_NAME/EXPRESSION FROM TABLE_NAME; --> This is the syntax for Projection
+
+DIfference between * and COLUMN_NAME/EXPRESSION:
+* is used to select all columns from the table.
+COLUMN_NAME/EXPRESSION is used to select specific columns from the table.
+DISTINCT is used to remove duplicate rows from the result set.
+
+Difference between WHERE and HAVING clause:
+WHERE is used to filter rows before the result set is generated.
+HAVING is used to filter rows after the result set is generated.
+
+Difference between AND and OR operator:
+AND operator displays the rows if both conditions are true.
+OR operator displays the rows if either of the conditions is true.
+
+Difference between SELECT and PROJECTION:
+SELECT is used to retrieve data from a database.    
+PROJECTION is used to select the columns to be displayed in the result set.
+
+===================================================================================================
+
+3. SELECTION is used to select the rows to be displayed in the result set.
+syntax: SELECT column1, column2, ... FROM table_name WHERE condition;
+Selection is responsible for selecting the rows to be displayed in the result set.
+
+===================================================================================================
+
+4. JOINS are used to combine rows from two or more tables based on a related column between them.
+syntax: SELECT column1, column2, ... FROM table1 JOIN table2 ON table1.column = table2.column;
+Joins are responsible for combining rows from two or more tables based on a related column between them.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Order of Execution:
+1. FROM : it searches and selects the table to be used in the query. That is fetched from the table.
+2. WHERE : it filters the rows from the table. The condition is applied to the table and the rows are filtered.
+3. SELECT : it selects the columns to be displayed in the result set. 
+4. JOINS : it combines rows from two or more tables based on a related column between them. 
+5. HAVING : it filters the rows after the result set is generated. The condition is applied to the result set and the rows are filtered.
+6. ORDER BY : it sorts the result set in ascending or descending order. 
+7. LIMIT : it limits the number of rows to be displayed in the result set. 
+8. OFFSET : it skips the number of rows to be displayed in the result set. 
+9. GROUP BY : it groups the result set by one or more columns. 
+10. DISTINCT : it removes duplicate rows from the result set. 
+11. AS : it is used to give a temporary name to a column or table. 
+12. INTO : it is used to insert the result set into a table. 
+13. VALUES : it is used to specify the values to be inserted into a table. 
+14. INSERT : it is used to insert the result set into a table. 
+15. UPDATE : it is used to update the rows in a table. 
+16. DELETE : it is used to delete the rows from a table.
+17. COMMIT : it is used to save the changes made to the database.
+18. ROLLBACK : it is used to undo the changes made to the database.
+19. SAVEPOINT : it is used to create a savepoint in a transaction. 
+
+================================================================================================
+
+Syntax examples for a PostGreSQL database:
+1. SELECT * FROM table_name; --> This is used to select all columns from the table.
+2. SELECT column1, column2, ... FROM table_name; --> This is used to select specific columns from the table.
+3. SELECT * FROM table_name WHERE condition; --> This is used to select all columns from the table based on a condition.
+4. SELECT column1, column2, ... FROM table_name WHERE condition; --> This is used to select specific columns from the table based on a condition.
+
+5. Select dept_num, DISTINCT job_code FROM employee; --> This is used to select distinct job_code from the employee table.
+
+
+=====================================================================================================================
+
+Operators:
+1. Arithmetic Operators: +, -, *, /, %
+2. Comparison Operators: =, !=, <, >, <=, >=
+3. Logical Operators: AND, OR, NOT
+4. Bitwise Operators: &, |, ^, ~, <<, >>
+5. Assignment Operators: =, +=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=
+6. Special Operators: IN, BETWEEN, LIKE, REGEXP, IS NULL, IS NOT NULL, IS TRUE, IS FALSE, IS UNKNOWN, IS NOT TRUE, IS NOT FALSE, IS NOT UNKNOWN
+7. Set Operators: UNION, INTERSECT, EXCEPT
+8. String Operators: ||, LIKE, ILIKE, SIMILAR TO, REGEXP, REGEXP_INSENSITIVE
+9. Type Operators: ::, CAST(), CONVERT()
+10. Subquery Operators: ANY, ALL, EXISTS, IN, NOT EXISTS
+
+=====================================================================================================================
+
+Constraints:
+1. NOT NULL: It enforces a column to not accept NULL values.
+2. UNIQUE: It enforces a column to not accept duplicate values.
+3. PRIMARY KEY: It enforces a column to not accept NULL values and duplicate values. It is a combination of NOT NULL and UNIQUE constraints. Every table should have a primary key.
+4. FOREIGN KEY: It enforces a column to accept only values that exist in the parent table. It is used to link two tables together.
+5. CHECK: It enforces a column to accept only values that satisfy a condition.
+6. DEFAULT: It enforces a column to accept a default value if no value is specified.
+
+===================================================================================================================
+
+Aggregate Functions or Multiple row functions:
+1. COUNT: It returns the number of rows in a table.
+2. SUM: It returns the sum of all the values in a column.
+3. AVG: It returns the average of all the values in a column.
+4. MAX: It returns the maximum value in a column.
+5. MIN: It returns the minimum value in a column.
+6. GROUP_CONCAT: It returns a string with the values of a column separated by a comma.
+7. CONCAT: It returns a string with the values of two or more columns.
+
+Remember: 
+1. Aggregate functions are used with GROUP BY clause. GROUP BY clause is used to group the result set by one or more columns.
+2. Aggregate functions are used with HAVING clause. HAVING clause is used to filter groups after the result set is generated.
+3. Aggregate functions are used with WHERE clause. But, WHERE clause is used to filter rows before the result set is generated.
+
+But select ename from emp where sal>avg(sal) is wrong. Why?
+Ans: Because avg(sal) is an aggregate function and it is used to calculate the average salary of all the employees. 
+But, we are using it in the WHERE clause which is used to filter rows before the result set is generated. 
+So, we should not use aggregate functions in the WHERE clause.
+
+eg:
+-- select count(ename) from emp where job='CLERK';
+
+-- select count(ename) from emp;
+
+-- select ename from emp where sal>(select avg(sal) from emp);
+
+-- select * from emp where sal = (select max(sal) from emp);
+
+-- select * from emp where sal = (select max(sal) from emp);
+===================================================================================================================
+
+GROUP BY clause: It is used to group the result set by one or more columns.
+eg: -- select job, count(*) from emp group by job;
+
+-- select job, count(*) from emp group by job, deptno;
+
+-- SELECT deptno, count(*) from emp where sal>2000 group by deptno;
+
+===================================================================================================================
+
+HAVING clause: It is used to filter groups after the result set is generated.
+eg: -- select job, count(*) from emp group by job having count(*)>5;
+
+-- select job, count(*) from emp group by job, deptno having count(*)>5;
+
+===================================================================================================================
+
+Where vs Having:
+Where is used for filtering records, having is used for filtering groups.
+
+=================================================================================================================
+
+ORDER BY clause: It is used to sort the result set in ascending or descending order.
+
+-- select deptno, sal from emp order by deptno; 
+
+-- select deptno, sal from emp order by deptno, sal;
+
+===================================================================================================================
+
+ASC vs DESC: ASC is used to sort the result set in ascending order, DESC is used to sort the result set in descending order.
+eg: -- select deptno, sal from emp order by deptno ASC;
+
+=================================================================================================================
+
+LIMIT clause: It is used to limit the number of rows to be displayed in the result set.
+eg: -- select * from emp limit 5;
+
+OFFSET clause: It is used to skip the number of rows to be displayed in the result set.
+eg: -- select * from emp limit 5 offset 5;
+=================================================================================================================
+
+JOINS: Used to combine rows from two or more tables based on a related column between them. 
+
+1. INNER JOIN: It returns the matching rows from two tables.
+eg: -- select * from emp inner join dept on emp.deptno = dept.deptno;
+
+2. LEFT JOIN: It returns all the rows from the left table and the matching rows from the right table. If there is no match, the result is NULL on the right side.
+eg: -- select * from emp left join dept on emp.deptno = dept.deptno;
+
+3. RIGHT JOIN: It returns all the rows from the right table and the matching rows from the left table. If there is no match, the result is NULL on the left side.
+eg: -- select * from emp right join dept on emp.deptno = dept.deptno;
+
+4. FULL JOIN: It returns all the rows from both the tables. If there is no match, the result is NULL on either side.
+eg: -- select * from emp full join dept on emp.deptno = dept.deptno;
+
+5. CROSS JOIN: It returns the Cartesian product of the two tables. That is, it returns all the possible combinations of rows from the two tables.
+eg: -- select * from emp cross join dept;
+
+6. SELF JOIN: It is used to join a table with itself.
+eg: -- select * from emp e1, emp e2 where e1.mgr = e2.empno;
+
+7. EQUI JOIN: It is used to join two tables based on an equality condition.
+eg: -- select * from emp, dept where emp.deptno = dept.deptno;
+
+8. NATURAL JOIN: It is used to join two tables based on a common column. It does not require the ON clause.
+eg: -- select * from emp natural join dept;
+
+9. USING JOIN: It is used to join two tables based on a common column. It requires the USING clause.
+eg: -- select * from emp join dept using (deptno);
+
+=================================================================================================================
+
+INSERT query: INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
+
+UPDATE query: UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
+
+ADD query: ALTER TABLE table_name ADD column_name column_definition;    
+
+DELETE query: DELETE FROM table_name WHERE condition;
+
+TRUNCATE query: TRUNCATE TABLE table_name; --> It deletes all the rows from a table.
+
+DROP query: DROP TABLE table_name; --> It deletes the table from the database. Cannot be Rolled back.
+=================================================================================================================
+
+ACID Properties of a database:
+A: Atomicity : All the transactions should be executed as a single unit. If any transaction fails, all the transactions should be rolled back.
+C: Consistency : The data should be consistent before and after the transaction.
+I: Isolation : Transactions should be isolated from each other.
+D: Durability : The changes made by a transaction should be permanent and should not be lost even if there is a system failure.
+
+In postgres, concurrency control is achieved using MVCC (Multi Version Concurrency Control). It uses a mechanism called "snapshot isolation".
+In snapshot isolation, each transaction has its own snapshot of the database. The transaction can only see the data that was committed before the transaction started.
+=================================================================================================================
+
+COMMIT: It is used to save the changes made by a transaction. Once the changes are committed, they cannot be rolled back.
+eg: -- commit;
+
+ROLLBACK: It is used to undo the changes made by a transaction.
+eg: -- rollback;
+
+SAVEPOINT : It is used to create a savepoint in a transaction. It is used to rollback to a specific point in the transaction.
+eg: -- savepoint sp1;
+=================================================================================================================
+
+SUM() VS COUNT()
+SUM() returns the sum of all the values in a column. COUNT() returns the number of rows in a table.
+eg: -- select sum(sal) from emp;
+    -- select count(*) from emp;
+=================================================================================================================
+
+ What is HAVING clause, list the characteristics of HAVING. 
+HAVING clause is used to filter the groups after the result set is generated. It is used with GROUP BY clause. It is used to filter groups based on a condition. 
+eg: -- select job, count(*) from emp group by job having count(*)>5;
+=================================================================================================================
+
+What is the difference between DELETE with and without a WHERE clause?
+
+DELETE with WHERE clause: It deletes the specific rows from a table.
+DELETE without WHERE clause: It deletes all the rows from a table.
+eg: -- delete from emp where empno=7369;
+    -- delete from emp;
+=================================================================================================================
+What is the purpose of the UNIQUE constraint?
+The purpose of the UNIQUE constraint is to ensure that all the values in a column are unique. It does not allow duplicate values in a column.
+eg: -- alter table emp add constraint unique_ename unique (ename);
+=================================================================================================================
+What are aggregate functions in SQL?
+Aggregate functions are used to perform calculations on a set of values and return a single value. They are used with the GROUP BY clause. 
+Examples of aggregate functions are: COUNT(), SUM(), AVG(), MAX(), MIN().
+=================================================================================================================
+
+What is the purpose of the SQL ORDER BY clause?
+ORDER BY clause is used to sort the result set in ascending or descending order.
+eg: -- select * from emp order by sal;
+=================================================================================================================
+
+17. Explain primary key and the characteristics of primary key
+Primary key is a column or a set of columns that uniquely identifies a row in a table. It is used to enforce entity integrity. Characteristics of primary key are:
+1. It cannot contain NULL values.
+2. It must be unique.
+3. It cannot be changed.
+4. It cannot be duplicated.
+5. It is used to uniquely identify a row in a table.
+eg: -- alter table emp add constraint pk_empno primary key (empno);
+=================================================================================================================
+What is rollback ? how are rollback and savepoint related. Explain with example.    
+ROLLBACK: It is used to undo the changes made by a transaction.
+eg: -- rollback;
+eg: -- savepoint sp1;
+    -- rollback to sp1;
+=================================================================================================================
+
+Fetch names starting with ‘S’ and ending with ‘N’.
+To fetch names starting with ‘S’ and ending with ‘N’, we can use the LIKE operator.
+eg: -- select ename from emp where ename like 'S%N';
+=================================================================================================================
+
+What is the difference between left join and right join?
+Left join: It returns all the rows from the left table and the matching rows from the right table. If there is no match, the result is NULL on the right side.
+Right join: It returns all the rows from the right table and the matching rows from the left table. If there is no match, the result is NULL on the left side.
+
+Truncate Vs delete
+Truncate: It is used to delete all the rows from a table. It cannot be rolled back. It is faster than delete.
+Delete: It is used to delete specific rows from a table. It can be rolled back. It is slower than truncate.
+Delete can be rolled back, truncate cannot be rolled back.
+
+===================================================================================================================
+
+What is the use of CROSS join.
+CROSS JOIN: It returns the Cartesian product of the two tables. That is, it returns all the possible combinations of rows from the two tables.
+eg: -- select * from emp cross join dept;
+
+===================================================================================================================
+Write the Syntax for all Outer joins.
+Left join: -- select * from emp left join dept on emp.deptno = dept.deptno;
+Right join: -- select * from emp right join dept on emp.deptno = dept.deptno;
+Full join: -- select * from emp full join dept on emp.deptno = dept.deptno;
+===================================================================================================================
+
+What is the difference between WHERE and HAVING ?
+WHERE is used to filter rows before the result set is generated. HAVING is used to filter groups after the result set is generated.
+
+
+What are aggregate functions? Can we use them with WHERE ?
+Aggregate functions are used to perform calculations on a set of values and return a single value. They are used with the GROUP BY clause. 
+We cannot use aggregate functions with WHERE clause.
+
+===================================================================================================================
+
+What is the use of Self join? Give an example.
+Self join: It is used to join a table with itself. It is used to compare the data in a table with itself.
+eg: -- select * from emp e1, emp e2 where e1.mgr = e2.empno;
+
+===================================================================================================================
+
+1. How can you fetch unique rows without using DISTINCT ?
+We can fetch unique rows without using DISTINCT by using GROUP BY clause.
+eg: -- select ename, sal from emp group by ename, sal;
+
+===================================================================================================================
+Fetch the top (highest ) 3 salaries only 
+select sal from emp order by sal desc limit 3;
+
+Find the second highest salary from an employee table.
+select distinct sal from emp order by sal desc limit 1 offset 1;
+===================================================================================================================
+Write a query to change the name of ename columns form employee table to emp_name
+
+select ename as emp_name from emp;
+
+===================================================================================================================
+ Create a table Customer(id,name,email) and Product(id,name,prize).
+Add foreign key in customer table referencing the product table.
+
+CREATE TABLE Customer(id int, name varchar(20), email varchar(20), product_id int, FOREIGN KEY (product_id) REFERENCES Product(id));
+
+===================================================================================================================
+
+Display the name of department and the number of employees. 
+select deptno, count(*) from emp group by deptno;
+
+===================================================================================================================
+
+Display the oldest employee.
+select * from emp where hiredate = (select min(hiredate) from emp);
+
+===================================================================================================================
+
+Display the name of employee, his department name and his Salary Grade. 
+select ename, dname, grade from emp, dept, salgrade where emp.deptno = dept.deptno and emp.sal between salgrade.losal and salgrade.hisal;
+
+===================================================================================================================

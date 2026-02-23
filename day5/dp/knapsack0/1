@@ -1,0 +1,119 @@
+1️⃣ What is the 0/1 Knapsack Problem? (Very simple words)
+
+Imagine:
+
+You have a bag (knapsack) that can carry limited weight
+
+You have items, each item has:
+
+Weight
+
+Value (profit)
+
+You want to maximize total value
+
+You cannot break items
+
+You either take the whole item or don’t take it
+
+👉 0/1 means:
+
+0 → not taken
+
+1 → taken
+
+Example (Real-life thinking)
+Item	Weight	Value
+A	1	10
+B	2	15
+C	3	40
+
+Knapsack capacity = 5
+
+Goal:
+👉 Pick items so that total weight ≤ 5
+👉 Total value is maximum
+
+2️⃣ Criteria / Rules to follow (Very Important)
+
+You MUST follow these rules in 0/1 Knapsack:
+
+✅ Rule 1: Each item can be used only once
+
+You cannot repeat the same item
+
+✅ Rule 2: Item is either taken or not taken
+
+No partial selection
+
+You can’t take half an item
+
+✅ Rule 3: Total weight must not exceed capacity
+
+If capacity is 5, weight must be ≤ 5
+
+✅ Rule 4: Goal is to maximize value, not weight
+
+Weight is a constraint
+
+Value is the target
+
+3️⃣ Why do we use Dynamic Programming (DP)?
+Problem with brute force
+
+If you try all combinations, time becomes very large (2ⁿ).
+
+DP idea (simple language)
+
+“Solve small problems first and reuse their answers”
+
+We build a table where:
+
+Rows → items
+
+Columns → knapsack capacity
+
+4️⃣ DP Table Meaning (Most Important Part)
+
+Let:
+
+dp[i][w]
+Meaning:
+
+Maximum value we can get using first i items with capacity w
+
+DP decision logic (heart of the problem)
+
+For each item:
+
+1️⃣ If item weight > current capacity
+➡ Cannot take it
+➡ Copy previous value
+
+dp[i][w] = dp[i-1][w]
+
+2️⃣ If item weight ≤ current capacity
+➡ Choose maximum of:
+
+Not taking item
+
+Taking item
+
+dp[i][w] = max(
+    dp[i-1][w],                      // not take
+    value[i] + dp[i-1][w - weight[i]] // take
+)
+5️⃣ Visual DP Table (Conceptual)
+
+Example capacity = 5
+Items = 3
+
+        Capacity →
+Items ↓   0  1  2  3  4  5
+--------------------------------
+0 items   0  0  0  0  0  0
+Item 1    0 10 10 10 10 10
+Item 2    0 10 15 25 25 25
+Item 3    0 10 15 40 50 55  ✅
+
+👉 Final answer = dp[3][5] = 55

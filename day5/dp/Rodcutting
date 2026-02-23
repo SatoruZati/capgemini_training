@@ -1,0 +1,86 @@
+1️⃣ What is the Rod Cutting Problem? (Very Simple)
+
+You are given:
+
+A rod of length N
+
+A price list where:
+
+price[i] = price of rod piece of length i
+
+Your task:
+
+👉 Cut the rod in any way
+👉 Sell the pieces
+👉 Get maximum total profit
+
+💡 You can cut the rod any number of times.
+
+2️⃣ Simple Example (Understand First)
+
+Rod length = 4
+
+Piece Length	1	2	3	4
+Price        	2	5	7	8
+
+Possible ways:
+
+4 → price = 8
+
+2 + 2 → 5 + 5 = 10 ✅
+
+1 + 3 → 2 + 7 = 9
+
+1 + 1 + 1 + 1 → 8
+
+👉 Maximum profit = 10
+
+3️⃣ Important Rules / Criteria
+✅ Rule 1: Rod can be cut into any number of pieces
+
+(Unlike 0/1 Knapsack)
+
+✅ Rule 2: You can use the same length again
+
+(Unbounded problem)
+
+✅ Rule 3: Order of pieces does NOT matter
+✅ Rule 4: Goal is to maximize total price
+4️⃣ Why Dynamic Programming?
+Brute force problem:
+
+Try all cut combinations ❌
+
+Exponential time
+
+DP idea:
+
+“For each rod length, store the maximum profit possible”
+
+5️⃣ DP Meaning (MOST IMPORTANT)
+
+Let:
+
+dp[i]
+Meaning:
+
+Maximum profit obtainable from rod of length i
+
+6️⃣ DP Relation (Core Logic)
+
+For rod length i:
+
+Try all possible first cuts:
+
+dp[i] = max(price[j] + dp[i - j])
+where j = 1 to i
+
+💡 Meaning:
+
+Cut a piece of length j
+
+Remaining rod = i - j
+
+Add best profit of remaining part
+
+7️⃣ Visual Representation
