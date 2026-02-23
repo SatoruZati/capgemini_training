@@ -19,7 +19,7 @@ A comprehensive collection of Java programming exercises and examples from Capge
 
 ## 🎯 Overview
 
-This repository contains Java programming exercises, examples, and practice code from Capgemini training sessions conducted in January-February 2026. Each directory represents a day's learning material, organized chronologically.
+This repository contains Java programming exercises, examples, and practice code from Capgemini training sessions conducted between January and February 2026 (Days 1–27). Each directory represents a day's learning material, organized chronologically, covering topics from Java basics through advanced concepts such as lambdas, streams, file handling, and multithreading.
 
 ## 📁 Repository Structure
 
@@ -44,8 +44,17 @@ capgemini_training/
 ├── capgemini_02022026/    # Day 17: Search Algorithms and Sorting Techniques
 ├── capgemini_03022026/    # Day 18: Comparable, Comparator, and Greedy Algorithms
 ├── capgemini_04022026/    # Day 19: Enums, Hashing Algorithms, and Jump Game Problems
+├── capgemini_05022026/    # Day 20: Heap Data Structure and Priority Queues
+├── capgemini_07022026/    # Day 21: Dynamic Programming and Greedy Programming Review
+├── capgemini_16022026/    # Day 22: String Pool and Memory Management
+├── capgemini_17022026/    # Day 23: Array Algorithm Problems
+├── capgemini_18022026/    # Day 24: Functional Interfaces and Lambda Expressions
+├── capgemini_19022026/    # Day 25: Stream API and Multithreading Basics
+├── capgemini_20022026/    # Day 26: File Handling and Multithreading
+├── capgemini_21022026/    # Day 27: Thread Lifecycle and I/O Streams
 ├── dp/                    # Dynamic Programming Algorithms
 ├── greedy/                # Greedy Algorithm Implementations
+├── SQL_Capgemini/         # SQL Reference Notes and Examples
 ├── examples/              # Practice Projects and Problem Statements
 └── LICENSE                # MIT License
 ```
@@ -341,6 +350,79 @@ Contains implementations of greedy algorithm problems:
   - Finding duplicates in arrays
   - Maximum jump length analysis
   - Dynamic programming vs greedy approaches
+
+### Day 20 (05/02/2026) - Heap Data Structure and Priority Queues
+- Heap as a specialized tree-based data structure
+- Max Heap vs Min Heap properties
+- Heap implementation using arrays (index arithmetic: left child = 2i+1, right child = 2i+2)
+- Core heap operations: insertion, deletion, heapification
+- Time complexities: O(log n) for insertion/deletion, O(n) for building a heap
+- Priority Queue using Min Heap and Max Heap
+- Real-world applications: heapsort, Dijkstra's and Prim's graph algorithms
+- K Most Frequent Elements problem using HashMap and Min Heap
+
+### Day 21 (07/02/2026) - Dynamic Programming and Greedy Review
+- Dynamic Programming criteria:
+  - Optimal Substructure: optimal solution built from optimal subproblems
+  - Top-Down (memoization) vs Bottom-Up (tabulation) approaches
+- Greedy Programming principles:
+  - Greedy Choice Property: locally optimal choice leads to globally optimal solution
+  - Optimal Substructure in greedy context
+- Comparison of DP vs Greedy:
+  - 0/1 Knapsack solved with Dynamic Programming
+  - Fractional Knapsack solved with Greedy (profit-per-weight ratio sorting)
+- Practical examples: Fibonacci, LCS, Activity Selection, Huffman Coding, Dijkstra's Algorithm
+
+### Day 22 (16/02/2026) - String Pool and Memory Management
+- String literal vs `new String()` object creation
+- Java String Pool (String Intern Pool) in heap memory
+- Object identity vs value equality (`==` vs `.equals()`)
+- Memory implications of string creation strategies
+
+### Day 23 (17/02/2026) - Array Algorithm Problems
+- First Occurrence in sorted/binary arrays
+- Binary Search variant for first occurrence
+- More Zeros problem (array with 0s and 1s)
+- Optimized more-zeros solution
+- Top occurring element in an array
+- Comparator-based custom sorting
+
+### Day 24 (18/02/2026) - Functional Interfaces and Lambda Expressions
+- Functional Interfaces with `@FunctionalInterface` annotation
+- Types of built-in functional interfaces: `Function`, `Predicate`, `Consumer`, `Supplier`, `BiPredicate`
+- Lambda expression syntax and method references
+- Anonymous class vs lambda expression comparison
+- `Consumer` interface and `accept()` method
+- Practical examples of lambda expressions with collections
+
+### Day 25 (19/02/2026) - Stream API and Multithreading Basics
+- Stream as a sequence of elements for functional-style data processing
+- Stream pipeline: creation → intermediate operations → terminal operations
+- Intermediate operations (lazy): `filter()`, `map()`, `sorted()`, `distinct()`
+- Terminal operations (eager): `forEach()`, `collect()`, `reduce()`, `toList()`, `toSet()`, `toMap()`
+- Stream creation from collections using `stream()`
+- Employee model examples with stream-based filtering and sorting
+- Introduction to multithreading concepts
+- Thread creation using `Runnable` and lambda expressions
+
+### Day 26 (20/02/2026) - File Handling and Multithreading
+- File I/O fundamentals in Java
+- Reading and writing files with standard I/O classes
+- Multithreading with `Thread` class and lambda expressions
+- Thread synchronization and `synchronized` keyword
+- Race conditions and how to prevent them
+
+### Day 27 (21/02/2026) - Thread Lifecycle and I/O Streams
+- Thread lifecycle states: NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED
+- `start()` vs `run()` method — creating a new thread vs calling method directly
+- Deprecated `stop()` method and safe alternatives
+- Synchronization issues: race conditions, deadlocks, thread starvation
+- ByteStream vs CharacterStream:
+  - ByteStream (`InputStream`/`OutputStream`) for binary data (images, audio)
+  - CharacterStream (`Reader`/`Writer`) for text data
+  - `FileOutputStream`/`FileInputStream` vs `FileReader`/`FileWriter`
+- `BufferedReader` vs `Scanner` for input reading
+- `BufferedWriter` vs `PrintWriter` for output writing
 
 ## ✅ Prerequisites
 
