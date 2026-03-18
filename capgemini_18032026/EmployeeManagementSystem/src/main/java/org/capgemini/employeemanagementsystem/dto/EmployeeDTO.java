@@ -1,11 +1,6 @@
 package org.capgemini.employeemanagementsystem.dto;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
 import lombok.Data;
-import org.capgemini.employeemanagementsystem.entity.Address;
 
 import java.util.List;
 
