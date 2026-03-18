@@ -83,15 +83,7 @@ Syntax of HQL:
 FROM Employee e WHERE e.department = :dept
 ```
 
+Hibernate can have cache but JDBC does not have cache. Hibernate provides a caching mechanism that allows you to store frequently accessed data in memory, which can improve performance by reducing the number of database queries. JDBC, on the other hand, does not have built-in caching capabilities and relies on the underlying database for data retrieval. Caching in Hibernate can be configured at different levels, such as first-level cache (session cache) and second-level cache (shared cache), to optimize data access and improve application performance.
+1st Level Cache: The first-level cache, also known as the session cache, is a cache that is associated with a specific Hibernate session. It stores entities that have been loaded or saved within that session. The first-level cache is automatically enabled and is used to optimize database access by reducing the number of queries executed for the same entity within a session. 
+2nd Level Cache: The second-level cache, also known as the shared cache, is a cache that is shared across multiple Hibernate sessions. It allows you to store entities that can be accessed by multiple sessions, improving performance by reducing the number of database queries for frequently accessed data. The second-level cache is optional and can be configured using various caching providers such as Ehcache or Infinispan.
 
-### Agenda for 06/03/2026
-
-- ### Java vs Javax vs Jakarta
-- ### Java Enterprise Edition (Java EE) vs Java Standard Edition (Java SE)
-- ### Why use spring framework?
-- ### Main motive for spring framework
-- ### Spring framework vs Java EE
-- ### Spring framework vs Java SE
-
-\
-Spring is a combination of modules that provide a wide range of functionalities for building enterprise applications. It offers features such as dependency injection, aspect-oriented programming, and support for various data access technologies. Spring is designed to be lightweight and flexible, allowing developers to choose the components they need for their specific application requirements. It also promotes good design practices and helps to simplify the development process by providing a comprehensive framework for building robust and scalable applications.

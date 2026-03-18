@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--    Constructor Injection (single-arg: sets only employeeID) -->
+    <bean id="employee2" class="com.example.Spring_Framework.Employee">
+        <constructor-arg value="EMP-003"/>
+    </bean>
+
+
+    <!--    Setter Injection - Employee 1 -->
+    <bean id="employee" class="com.example.Spring_Framework.Employee">
+        <property name="employeeID" value="EMP-001"/>
+        <property name="employeeName" value="Alice Johnson"/>
+        <property name="employeeSalary" value="75000.00"/>
+        <property name="employeeDepartment" value="Engineering"/>
+        <property name="employeeEmail" value="alice.johnson@example.com"/>
+        <property name="employeeAge" value="30"/>
+        <property name="employeePhone" value="+1-555-101-2030"/>
+    </bean>
+
+    <!--    Setter Injection - Employee 2 -->
+    <bean id="employee1" class="com.example.Spring_Framework.Employee">
+        <property name="employeeID" value="EMP-002"/>
+        <property name="employeeName" value="Bob Smith"/>
+        <property name="employeeSalary" value="85000.50"/>
+        <property name="employeeDepartment" value="Finance"/>
+        <property name="employeeEmail" value="bob.smith@example.com"/>
+        <property name="employeeAge" value="35"/>
+        <property name="employeePhone" value="+1-555-202-3040"/>
+    </bean>
+
+    <!--    p-namespace Setter Injection - Employee 3 -->
+    <bean id="employee3" class="com.example.Spring_Framework.Employee"
+          p:employeeID="EMP-004"
+          p:employeeName="Carol White"
+          p:employeeSalary="92000.00"
+          p:employeeDepartment="HR"
+          p:employeeEmail="carol.white@example.com"
+          p:employeeAge="28"
+          p:employeePhone="+1-555-303-4050"/>
+
+    <!--  bean name config  -->
+    <bean name="employee4" class="com.example.Spring_Framework.Employee"
+          p:employeeID="EMP-005"
+          p:employeeName="David Brown"
+          p:employeeSalary="78000.00"
+          p:employeeDepartment="Marketing"
+          p:employeeEmail="davidbrown59@yahoo.com"
+          p:employeeAge="32"
+          p:employeePhone="+1-555-404-5060"/>
+
+    <!--  constructor injection using all args  -->
+    <bean id="employee5" class="com.example.Spring_Framework.Employee">
+        <!-- <constructor-arg> is a self-closing tag  -->
+        <constructor-arg value="EMP-006"/>
+        <constructor-arg value="Eve Davis"/>
+        <constructor-arg value="68000.00"/>
+        <constructor-arg value="Sales"/>
+        <constructor-arg value="daviseve@redhat.com"/>
+        <constructor-arg value="29"/>
+        <constructor-arg value="+1-555-505-6070"/>
+    </bean>
+
+</beans>
