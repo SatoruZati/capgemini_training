@@ -19,7 +19,7 @@ A comprehensive collection of Java programming exercises and examples from Capge
 
 ## 🎯 Overview
 
-This repository contains Java programming exercises, examples, and practice code from Capgemini training sessions conducted between January and February 2026 (Days 1–27). Each directory represents a day's learning material, organized chronologically, covering topics from Java basics through advanced concepts such as lambdas, streams, file handling, and multithreading.
+This repository contains Java programming exercises, examples, and practice code from Capgemini training sessions conducted between January and March 2026 (Days 1–30). Each directory represents a day's learning material, organized chronologically, covering topics from Java basics through advanced concepts such as lambdas, streams, file handling, multithreading, and enterprise frameworks (Spring Boot, Spring MVC, and Hibernate ORM).
 
 ## 📁 Repository Structure
 
@@ -52,6 +52,10 @@ capgemini_training/
 ├── capgemini_19022026/    # Day 25: Stream API and Multithreading Basics
 ├── capgemini_20022026/    # Day 26: File Handling and Multithreading
 ├── capgemini_21022026/    # Day 27: Thread Lifecycle and I/O Streams
+├── capgemini_16032026/    # Day 28: Spring MVC, Servlets, and Jakarta Servlet API
+├── capgemini_17032026/    # Day 29: Spring Boot Application Setup and Spring Converter
+├── capgemini_18032026/    # Day 30: Employee Management REST API with Spring Data JPA
+├── Part02_Training/       # Enterprise Frameworks (Spring Core, Spring Boot, Hibernate)
 ├── dp/                    # Dynamic Programming Algorithms
 ├── greedy/                # Greedy Algorithm Implementations
 ├── SQL_Capgemini/         # SQL Reference Notes and Examples
@@ -113,6 +117,25 @@ Contains implementations of classic dynamic programming problems:
 Contains implementations of greedy algorithm problems:
 - **FractionalKnapsack.java** - Fractional knapsack problem using greedy approach
 - **Jobscheduling.java** - Job scheduling with deadlines for maximum profit
+
+### Enterprise Framework Projects (Part02_Training)
+
+The `Part02_Training/` directory contains five Maven-based Spring Boot / Hibernate projects targeting Java 21 and Spring Boot 4.0.3:
+
+1. **Spring_Core** - Entry point for exploring the Spring Framework; plain Java 21 project demonstrating the Spring IoC container and bean retrieval.
+
+2. **Spring_Framework** - XML-configured Spring beans showcasing all three core dependency injection styles:
+   - Constructor Injection
+   - Setter Injection
+   - p-namespace Injection
+
+3. **SpringBoot_Application** - Introductory Spring Boot 4.0.3 web application with `@RestController` endpoints (home, about, login, signup, redirect).
+
+4. **Hibernate_App_02** - Full DAO layer for `Student` JPA entity demonstrating all five CRUD operations via `EntityManager`:
+   - `save()`, `findById()`, `findAll()`, `update()`, `deleteById()`
+   - Uses `EntityManagerFactory` / `EntityManager` and `EntityTransaction`
+
+5. **Hibernate_03** - Advanced Hibernate project with Spring Boot; models `Employee`, `Address`, and `Department` entities using `@OneToOne` and `@CascadeType.ALL` relationships backed by PostgreSQL.
 
 ## 📚 Topics Covered
 
@@ -424,10 +447,39 @@ Contains implementations of greedy algorithm problems:
 - `BufferedReader` vs `Scanner` for input reading
 - `BufferedWriter` vs `PrintWriter` for output writing
 
+### Day 28 (16/03/2026) - Spring MVC and Jakarta Servlets
+- Jakarta Servlet API and `@WebServlet` annotation
+- HTTP request/response handling via `doGet()` / `doPost()`
+- WAR packaging and deployment to Apache Tomcat 10
+- MVC architecture and the Front Controller (DispatcherServlet) pattern
+- Difference between Spring MVC and Spring Boot
+- View resolution with JSP (prefix/suffix configuration)
+- Data Transfer Object (DTO) pattern introduction
+
+### Day 29 (17/03/2026) - Spring Boot Application Setup
+- `@SpringBootApplication` and its composite annotations (`@Configuration`, `@EnableAutoConfiguration`, `@ComponentScan`)
+- Spring Boot BOM (Bill of Materials) for consistent dependency management
+- `spring-boot-starter-parent` parent POM and starter dependencies
+- Lombok integration for boilerplate reduction
+- Introduction to CRUD application scaffolding with Spring Boot
+
+### Day 30 (18/03/2026) - Employee Management REST API with Spring Data JPA
+- Full layered architecture: Entity → DTO → Repository → Service → Controller
+- JPA entity mapping with `@Entity`, `@Table`, `@Column`, and `@Id`
+- One-to-Many / Many-to-One relationships (`@OneToMany`, `@ManyToOne`, `@JoinColumn`)
+- Cascade operations (`CascadeType.ALL`) and fetch strategies (`FetchType.LAZY`)
+- Spring Data JPA `JpaRepository` with derived query methods (`findByEmail`, `findByDepartmentIgnoreCase`)
+- Constructor-based dependency injection in `@Service` classes
+- `@Transactional` for data consistency
+- REST controller with full CRUD endpoints using `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`
+- Request handling with `@PathVariable`, `@RequestParam`, and `@RequestBody`
+- PostgreSQL database integration via Spring Boot auto-configuration
+
 ## ✅ Prerequisites
 
-- **Java Development Kit (JDK)**: Version 8 or higher
+- **Java Development Kit (JDK)**: Version 17 or higher (Java 21 recommended for Part02_Training)
 - **IDE**: Eclipse, IntelliJ IDEA, or any Java-compatible IDE
+- **Maven**: Required for Spring Boot and Hibernate projects in `Part02_Training/` and March 2026 sessions
 - **Basic Knowledge**: Familiarity with programming concepts is helpful but not required
 
 ## 🚀 Getting Started
@@ -489,6 +541,8 @@ For optimal learning, it's recommended to go through the directories in chronolo
 3. Complete the practice exercises in each section
 4. Review the examples and modify them to experiment with concepts
 5. Once you've covered the fundamentals and OOP concepts (Days 1-16), tackle the practice projects in the `examples/` folder to apply multiple concepts together
+6. After completing Days 1-27, move on to Days 28-30 (March 2026 sessions) for an introduction to Spring MVC and Spring Boot REST APIs
+7. Explore `Part02_Training/` for deeper coverage of Spring Framework dependency injection, Spring Boot, and Hibernate ORM with real database integration
 
 ## 🤝 Contributing
 
